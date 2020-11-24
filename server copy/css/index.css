@@ -1,0 +1,189 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%; }
+
+header nav .upper-row form.search-form input[type="submit"], header nav .upper-row .button.new-sale, header nav .upper-row .button.notifications, header nav .upper-row .button.profile, header nav .upper-row .button.menu, header nav .lower-row .navigation-category-toggle .icon.textbook, header nav .lower-row .navigation-category-toggle .icon.pencil {
+  background-image: url("/img/icons/ui-icons.svg");
+  background-repeat: no-repeat; }
+
+header nav {
+  display: block;
+  margin: 0;
+  padding: 0; }
+  header nav .upper-row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0.5rem;
+    font: 3rem "Helvetica Neue", "Arial", sans-serif;
+    background-color: #7ac1ff; }
+    header nav .upper-row .logo {
+      display: block;
+      flex-grow: 1;
+      width: 12rem;
+      height: 3rem;
+      background-image: url("/img/logo.svg");
+      background-position-x: 0;
+      background-size: auto 100%;
+      background-repeat: no-repeat; }
+    header nav .upper-row #navigation-shortcuts, header nav .upper-row .shortcut-buttons {
+      display: contents; }
+    header nav .upper-row form.search-form {
+      display: inline-block;
+      position: relative;
+      height: 3rem; }
+      header nav .upper-row form.search-form input[type="text"] {
+        display: inline-block;
+        vertical-align: top;
+        box-sizing: border-box;
+        margin: 0;
+        border: 0;
+        border-radius: 1.5rem;
+        padding: 0.75rem;
+        padding-right: 3.75rem;
+        height: 100%;
+        font-size: 1.5rem; }
+      header nav .upper-row form.search-form input[type="submit"] {
+        background-size: 12rem 60rem;
+        background-position: 0rem -12rem;
+        position: absolute;
+        appearance: none;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        border: none;
+        padding: 0;
+        width: 3rem;
+        height: 3rem;
+        background-color: transparent; }
+    header nav .upper-row .button {
+      display: inline-block;
+      position: relative;
+      margin: 0 0 0 0.75rem;
+      border: 0;
+      border-radius: 50%;
+      width: 3rem;
+      height: 3rem;
+      background-color: white; }
+      header nav .upper-row .button.new-sale {
+        background-size: 12rem 60rem;
+        background-position: 0rem -30rem; }
+      header nav .upper-row .button.notifications {
+        background-size: 12rem 60rem;
+        background-position: 0rem -18rem; }
+      header nav .upper-row .button.profile {
+        background-size: 12rem 60rem;
+        background-position: 0rem 0rem; }
+      header nav .upper-row .button.menu {
+        background-size: 12rem 60rem;
+        background-position: 0rem -54rem;
+        appearance: none; }
+      header nav .upper-row .button[mark]:after {
+        display: block;
+        position: absolute;
+        box-sizing: border-box;
+        right: 15%;
+        top: 15%;
+        width: 40%;
+        height: 40%;
+        border-radius: 50%;
+        background-color: red;
+        content: attr(mark);
+        font-size: 0.96rem;
+        text-align: center;
+        color: white; }
+    header nav .upper-row .toggle-menu {
+      display: none;
+      flex-flow: column;
+      position: fixed;
+      z-index: 10;
+      right: 0;
+      top: 4rem;
+      height: 100vh;
+      background-color: #7ac1ff; }
+      header nav .upper-row .toggle-menu .search-form, header nav .upper-row .toggle-menu .shortcut-buttons {
+        margin: 0.25em 0; }
+      header nav .upper-row .toggle-menu .shortcut-buttons {
+        display: flex;
+        justify-content: space-between; }
+    header nav .upper-row input:checked + .toggle-menu {
+      display: flex; }
+  header nav .lower-row {
+    display: flex;
+    font: 1.2rem "Helvetica Neue", "Arial", sans-serif;
+    background-color: #7ac1ff;
+    padding: 0 0.25em 0.25em 0.25em; }
+    header nav .lower-row .navigation-category-toggle {
+      flex-basis: 20%;
+      flex-grow: 1;
+      box-sizing: border-box;
+      margin: 0 0.25em;
+      padding: 0.25em;
+      border-radius: 1.2rem;
+      text-align: center;
+      background-color: white;
+      color: black; }
+      header nav .lower-row .navigation-category-toggle .icon {
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+        width: 1em;
+        height: 1em;
+        transform: translateY(0.1em); }
+        header nav .lower-row .navigation-category-toggle .icon.textbook {
+          background-size: 4em 20em;
+          background-position: -2em 0em; }
+        header nav .lower-row .navigation-category-toggle .icon.pencil {
+          background-size: 4em 20em;
+          background-position: -2em -2em; }
+    header nav .lower-row .category-popup {
+      display: none;
+      justify-content: space-between;
+      position: fixed;
+      left: 0;
+      top: 7.8rem;
+      box-sizing: border-box;
+      width: 100%;
+      background-color: rgba(122, 193, 255, 0.8);
+      color: white; }
+      header nav .lower-row .category-popup::before {
+        display: block;
+        position: absolute;
+        border-style: solid;
+        border-color: transparent transparent rgba(122, 193, 255, 0.8) transparent;
+        border-width: 0 1em 1em 1em;
+        left: var(--arrow-offset);
+        bottom: 100%;
+        width: 0;
+        height: 0;
+        content: "";
+        transform: translateX(-50%); }
+      header nav .lower-row .category-popup .category-popup-scrollable {
+        display: flex;
+        margin: 0;
+        padding: 0; }
+      header nav .lower-row .category-popup .subcategory {
+        margin: 1em;
+        flex-grow: 1; }
+        header nav .lower-row .category-popup .subcategory ul {
+          list-style-type: none;
+          padding: 0; }
+          header nav .lower-row .category-popup .subcategory ul li {
+            display: block;
+            margin: 0.25em 0;
+            padding: 0; }
+            header nav .lower-row .category-popup .subcategory ul li a {
+              display: block;
+              padding: 0.25em;
+              background-color: white;
+              color: black;
+              border-radius: 1em;
+              text-decoration: none; }
+              header nav .lower-row .category-popup .subcategory ul li a:active, header nav .lower-row .category-popup .subcategory ul li a:visited, header nav .lower-row .category-popup .subcategory ul li a:hover {
+                color: black; }
+    header nav .lower-row input:checked + .category-popup {
+      display: block; }

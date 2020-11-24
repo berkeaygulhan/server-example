@@ -1,0 +1,156 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%; }
+
+form .text-input, form button, form input[type="button"], form input[type="submit"] {
+  display: block;
+  box-sizing: border-box;
+  margin: 0.25em 0;
+  border: 0;
+  border-radius: 0.25em;
+  padding: 0.25em;
+  width: 100%;
+  height: 1.5em; }
+
+form .form-line {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center; }
+  form .form-line span {
+    margin: 0 0 0.25em 0;
+    height: 1em; }
+  form .form-line input {
+    margin-top: 0;
+    flex-grow: 1; }
+
+form h1, form h2 {
+  margin: 0 0 0.25em 0; }
+
+form h1 {
+  font-size: 2em;
+  text-align: center; }
+
+form h2 {
+  font-size: 1em; }
+
+form .text-input {
+  position: relative;
+  font: inherit; }
+  form .text-input.with-icon {
+    padding-left: 1.5em;
+    background-size: 2.4em 4.8em;
+    background-repeat: no-repeat; }
+  form .text-input.error {
+    box-shadow: inset 0px 0px 0.1em 0.1em #f88; }
+
+form .input-error {
+  margin: 0 0 0.25em 0;
+  color: #f88;
+  font-size: 0.75em;
+  font-weight: bolder;
+  text-align: right; }
+
+form button, form input[type="button"], form input[type="submit"] {
+  border: 0.125em solid white;
+  background: none;
+  color: white;
+  text-align: center;
+  font: inherit;
+  line-height: 0.5em; }
+  form button:hover, form input[type="button"]:hover, form input[type="submit"]:hover {
+    background-color: rgba(255, 255, 255, 0.2); }
+
+@use "sass:color" {}@keyframes fly-out {
+  from {
+    transform: none; }
+  to {
+    transform: translateX(-100%); } }
+
+body {
+  position: relative; }
+
+.background-layer, .form-layer {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden scroll; }
+
+.background-layer {
+  z-index: -1; }
+  .background-layer.colored {
+    background: linear-gradient(#0088ff, #0066bb); }
+  .background-layer * {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%; }
+
+.form-layer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-size: 100% 100%; }
+  .form-layer.from-register {
+    animation-name: fly-out;
+    animation-fill-mode: backwards;
+    animation-duration: 1s;
+    animation-timing-function: ease-in; }
+  .form-layer.to-register {
+    animation-name: fly-out;
+    animation-duration: 1s;
+    animation-timing-function: ease-in; }
+
+.form-container {
+  box-sizing: border-box;
+  font-size: 1.5rem;
+  font-family: "Helvetica Neue", helvetica, Arial, sans-serif;
+  padding: 1em;
+  width: 500px;
+  align: center;
+  background-color: rgba(122, 193, 255, 0.75);
+  color: white; }
+  .form-container.wide {
+    width: 1000px; }
+  .form-container .logo {
+    width: 100%;
+    height: 125px;
+    background-image: url("/img/logo.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat; }
+  .form-container a {
+    text-decoration: none;
+    color: white;
+    font-weight: bolder; }
+  .form-container .text-input.with-icon {
+    background-image: url("/img/icons/login-icons.svg"); }
+    .form-container .text-input.with-icon.username {
+      background-position: 0.15em 0.15em; }
+    .form-container .text-input.with-icon.password {
+      background-position: 0.15em -2.25em; }
+  .form-container .form-line span {
+    width: 250px; }
+  .form-container .form-line input {
+    flex-basis: 500px; }
+  .form-container .alternative-form {
+    font-size: 0.75em;
+    text-align: center; }
+
+.company-logo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 20rem;
+  height: 4rem;
+  background-image: url("/img/launch-club-logo.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: -1; }
